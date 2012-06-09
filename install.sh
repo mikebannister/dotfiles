@@ -23,12 +23,17 @@ for name in *; do
       fi
     fi
   else
-    if [ "$name" != 'install.sh' ]; then
-      echo "Creating $target"
-      if [ -n "$(grep "$cutstring" "$name")" ]; then
-        cp "$PWD/$name" "$target"
-      else
-        ln -s "$PWD/$name" "$target"
+    if [ "$name" == 'bin' ]; then
+      target="$HOME/$name"
+      ln -sf "$PWD/$name" "$target"
+    else
+      if [ "$name" != 'install.sh' ]; then
+        echo "Creating $target"
+        if [ -n "$(grep "$cutstring" "$name")" ]; then
+          cp "$PWD/$name" "$target"
+        else
+          ln -s "$PWD/$name" "$target"
+        fi
       fi
     fi
   fi

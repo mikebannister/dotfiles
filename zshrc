@@ -9,7 +9,7 @@ compinit
 setopt auto_cd
 
 # use vim as an editor
-export EDITOR=vim
+export EDITOR=emacs
 
 # aliases
 if [ -e "$HOME/.aliases" ]; then
@@ -17,7 +17,7 @@ if [ -e "$HOME/.aliases" ]; then
 fi
 
 # vi mode
-bindkey -v
+bindkey -e
 bindkey "^F" vi-cmd-mode
 bindkey jj vi-cmd-mode
 
@@ -30,7 +30,6 @@ bindkey "^E" end-of-line
 
 # handy keybindings
 bindkey "^P" history-search-backward
-bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
@@ -38,7 +37,7 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 setopt prompt_subst
 
 # prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
+# export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 # ignore duplicate history entries
 setopt histignoredups
@@ -59,7 +58,7 @@ setopt AUTOPUSHD PUSHDMINUS PUSHDSILENT PUSHDTOHOME
 setopt cdablevars
 
 # Try to correct command line spelling
-setopt CORRECT CORRECT_ALL
+# setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB

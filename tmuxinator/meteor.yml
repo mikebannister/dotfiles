@@ -1,0 +1,28 @@
+project_name: Meteor
+project_root: ~/work/m
+tabs:
+  - forms:
+      layout: even-vertical
+      panes:
+        - cd forms
+        - cd forms
+  - cs:
+      layout: even-vertical
+      panes:
+        - cd client-sessions
+        - cd client-sessions
+  - us:
+      layout: even-vertical
+      panes:
+        - cd user-sessions
+        - cd user-sessions
+  - moon:
+      layout: even-vertical
+      panes:
+        - cd moon-blog
+        - cd moon-blog
+  - misc:
+      layout: even-vertical
+      panes:
+        - # zsh
+        - # zsh

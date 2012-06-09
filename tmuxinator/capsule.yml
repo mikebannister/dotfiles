@@ -1,0 +1,20 @@
+project_name: Capsule
+project_root: ~/work/capsule
+tabs:
+  - server:
+      layout: even-vertical
+      panes:
+        - bundle exec thin start -p 3000 --threaded
+        # - bundle exec rake VVERBOSE=1 resque:work "QUEUE=*"
+        - bundle exec rake resque:work "QUEUE=*"
+        - tail -f log/development.log
+        - bundle exec rails console
+  - project: mate ~/work/capsule 
+  - stage:
+      layout: even-vertical
+      panes:
+        - # zsh
+  - live:
+      layout: even-vertical
+      panes:
+        - # zsh
